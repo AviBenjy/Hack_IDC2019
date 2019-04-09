@@ -22,6 +22,7 @@ import logo from './assets/icons/logo.png'
 ### `Eslint (just for convention)`
 - Tabs (4 spaces)
 - No semicolon (pleas..)
+- Single qute
 - Space before curly brackets and after
 ```javascript
 // Example for Space before curly brackets and after
