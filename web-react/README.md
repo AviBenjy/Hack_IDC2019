@@ -42,4 +42,6 @@ const component = ({prop1, prop2}) => { }
 - thunk-redux
 - axios (not mandatory can use fetch - instead)
 - reselect (useful to select part from the redux store)
+- react-router-dom
+- prop-types
 
