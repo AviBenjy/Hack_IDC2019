@@ -8,7 +8,7 @@ const icons = [
     "fas fa-comment-alt", // 1 chat icon
     "fas fa-hands-helping", // 2 deals icon
     "fas fa-question-circle", // 3 helper icon
-    "test", // 4
+    "fas fa-book-open", // 4
     "fas fa-plus-circle", // 5 plus icon
     "fas fa-search", // 6 search icon
 ]
