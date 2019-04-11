@@ -16,8 +16,9 @@ const FloatingWidget = (props) => {
       props.toggleDictionary(!props.showDictionary)
   } 
 
-  
 
+
+  const iconIndex = props.showDictionary ? 7 : 3
   return (
     <Container>
         {
@@ -25,7 +26,7 @@ const FloatingWidget = (props) => {
         }
       
       <BtnWrapper>
-        <FloatingBtn onClick={handleClickFloatingBtn} iconIndex={5} color={colors.secondary}/>
+        <FloatingBtn onClick={handleClickFloatingBtn} iconIndex={iconIndex} color={colors.secondary}/>
       </BtnWrapper>
     </Container>
   )

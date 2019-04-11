@@ -11,6 +11,7 @@ const icons = [
     "fas fa-book-open", // 4
     "fas fa-plus-circle", // 5 plus icon
     "fas fa-search", // 6 search icon
+    "fas fa-times-circle" // 7 close icon
 ]
 
 const Icon = ({index, size, color, label, selected}) => (
