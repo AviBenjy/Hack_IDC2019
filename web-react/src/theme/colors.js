@@ -12,3 +12,5 @@ export const TextOnP = '#fff' // text on primary
 export const TextOnS = '#f5f5f5' // text on secondery
 
 // other colors
+
+export const greenDark = '#173C44'
