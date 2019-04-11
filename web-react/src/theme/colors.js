@@ -10,5 +10,5 @@ export const secondaryLight = '#ffbd45'
 
 export const TextOnP = '#fff' // text on primary
 export const TextOnS = '#f5f5f5' // text on secondery
-
+export const TextOnLight = '#819ca9'
 // other colors
