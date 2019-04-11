@@ -2,8 +2,7 @@ import React from 'react'
 import styled from '@emotion/styled'
 import ChartInfo from '../../Widgets/chart';
 import StatusAccount from '../../Widgets/status_account/StatusAccount';
-import FloatingBtn from '../../Atom/FloatingBtn';
-import SearchInput from '../../Atom/SearchInput';
+import ChartTemplate from '../../Widgets/chart_template/ChartTamplate';
 
 
 const Dashboard = () => {
@@ -15,6 +14,7 @@ const Dashboard = () => {
         <Spacer/>
         <StatusAccount/>
       </ChartInfoBasic>
+      <ChartTemplate/>
     </Container>
   )
 }
