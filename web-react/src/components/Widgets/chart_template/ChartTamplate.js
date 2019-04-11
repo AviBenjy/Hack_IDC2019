@@ -66,7 +66,7 @@ class ChartTemplate extends Component {
               margin: 0,
               size: '70%',
               background: '#fff',
-              image: undefined,
+              // image: undefined,
               imageOffsetX: 0,
               imageOffsetY: 0,
               position: 'front',

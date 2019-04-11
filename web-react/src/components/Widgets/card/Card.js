@@ -18,7 +18,7 @@ const Card = ({ title, image, setSelectOffer}) => {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 200px;

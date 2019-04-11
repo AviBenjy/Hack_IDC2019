@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from '@emotion/styled'
 import CardList from '../../Widgets/card_list/CardList'
-import OfferCard from '../../Widgets/offer_card/OfferCard';
+import OfferResults from '../../Widgets/offers_results/OffersRsults';
 
 const Deals = () => {
   return (
@@ -9,7 +9,11 @@ const Deals = () => {
       <Title>I wanna...</Title>
       <CardList />
 
-      <OfferCard/>
+      <WrapperOfferResults>
+        <div style={{width: '80%'}}>
+          <OfferResults/>
+        </div>
+      </WrapperOfferResults>
     </Container>
   )
 }
@@ -24,4 +28,10 @@ background: white;
 
 const Title = styled.h3`
   
+`
+
+const WrapperOfferResults = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
 `

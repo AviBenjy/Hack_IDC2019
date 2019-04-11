@@ -10,7 +10,7 @@ export const dealsReducer = (state = initialState, {type, payload}) => {
     const deals = {...dealsCopy, selectedOffer: payload}
   	    switch (type) {
   		    case SELECT_OFFER:
-  	    	  return { ...state,  deals}
+  	    	  return { ...state,  ...deals}
   		  default:
   	    	  return state
   	}
