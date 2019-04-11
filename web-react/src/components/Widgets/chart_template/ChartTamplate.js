@@ -232,18 +232,20 @@ class ChartTemplate extends Component {
     return (
       <Container >
 
+        <Card>
         <div className="row">
+          <div className="col percentage-chart">
+            <Chart options={this.state.optionsBar} height={140} series={this.state.seriesBar} type="bar" width={600} />
+          </div>
           <div className="col mixed-chart">
             <Chart options={this.state.optionsMixedChart} series={this.state.seriesMixedChart} type="line" width="500" />
           </div>
-
-          <div className="col percentage-chart">
-            <Chart options={this.state.optionsBar} height={140} series={this.state.seriesBar} type="bar" width={500} />
-          </div>
         </div>
+        </Card>
+
+        <Card>
 
         <div className="row">
-
           <div className="col radial-chart">
             <Chart options={this.state.optionsRadial} series={this.state.seriesRadial} type="radialBar" width="280" />
           </div>
@@ -251,6 +253,9 @@ class ChartTemplate extends Component {
             <button onClick={this.updateCharts}>Update!</button>
           </p>
         </div>
+        </Card>
+
+
       </Container>
     );
   }
@@ -261,4 +266,17 @@ export default ChartTemplate
 const Container = styled.div`
     padding: 20px 20px 20px 60px;
     display: flex;
+`
+
+const Card = styled.div`
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 8px;
+    transition: 0.3s;
+    padding: 16px 16px;
+    line-height: 32px;
+    border-radius: 4px;
+    background: ${'#fff'};
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
 `
