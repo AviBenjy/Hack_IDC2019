@@ -2,9 +2,12 @@ import React from 'react'
 import styled from '@emotion/styled'
 import ChartInfo from '../../Widgets/chart';
 import StatusAccount from '../../Widgets/status_account/StatusAccount';
+import FloatingBtn from '../../Atom/FloatingBtn';
+import SearchInput from '../../Atom/SearchInput';
 
 
 const Dashboard = () => {
+
   return (
     <Container>
       <ChartInfoBasic>
@@ -27,7 +30,6 @@ const Container = styled.div`
 const ChartInfoBasic = styled.div`
     padding: 20px;
     display: flex;
-    border: 1px solid black;
 `
 const Spacer = styled.div`
   width: 20px;
