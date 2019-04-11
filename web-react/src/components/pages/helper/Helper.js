@@ -38,7 +38,8 @@ const Navbar = styled.nav`
   display: flex;
   justify-content: flex-end;
   color: ${colors.TextOnLight};
-  background-color: ${colors.primaryDark}
+  background-color: ${colors.primaryDark};
+  position: sticky;
 `
 
 const Tab = styled.div`

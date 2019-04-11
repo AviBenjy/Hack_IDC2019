@@ -6,7 +6,7 @@ import OfferCard from '../../Widgets/offer_card/OfferCard';
 const Deals = () => {
   return (
     <Container>
-      I wanna...
+      <Title>I wanna...</Title>
       <CardList />
 
       <OfferCard/>
@@ -20,4 +20,8 @@ const Container = styled.div`
 margin: 56px 0 0 170px;
 height: 100vh;
 background: white;
+`
+
+const Title = styled.h3`
+  
 `
