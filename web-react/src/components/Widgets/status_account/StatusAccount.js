@@ -9,7 +9,7 @@ const StatusAccount = () => {
   return (
     <Container>
       <Header>
-        <Img src='https://cdn3.iconfinder.com/data/icons/vector-icons-6/96/256-512.png'></Img>
+        <Img src='https://img.icons8.com/bubbles/2x/administrator-male.png'></Img>
       </Header>
         {/* <Title>Status Account</Title>
         <p>Balance: $ 3006</p>  */}
