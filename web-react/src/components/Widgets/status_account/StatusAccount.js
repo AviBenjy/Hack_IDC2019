@@ -24,7 +24,6 @@ const Container = styled.div`
     transition: 0.3s;
     width: 35%;
     height: 280px;
-    padding: 16px 16px;
     line-height: 32px;
     border-radius: 4px;
     background: ${'#fff' || colors.greenDark};
