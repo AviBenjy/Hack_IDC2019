@@ -7,7 +7,8 @@ const icons = [
     "fas fa-chart-pie", // dashboard icon
     "fas fa-comment-alt", // chat icon
     "fas fa-hands-helping", // deals icon
-    "fas fa-question-circle" // helper icon
+    "fas fa-question-circle", // helper icon
+    "fas fa-book-open"
 ]
 
 const Icon = ({index, size, color, label, selected}) => (
