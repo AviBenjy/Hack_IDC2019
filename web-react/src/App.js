@@ -10,6 +10,7 @@ import Helper from './components/pages/helper/Helper'
 import Header from './components/Widgets/header/Header'
 import Menu from './components/Widgets/menu/Menu'
 import DictionaryResult from './components/Widgets/dictionary-helper/DictionaryResult'
+import FloatingWidget from './components/Widgets/floating_widget/FloatingWidget';
 
 
 class App extends Component {
@@ -25,7 +26,8 @@ class App extends Component {
 						<Route path='/deals' render={() => <Deals/>}/>
 						<Route path='/helper' render={() => <Helper/>}/>
 					</MainScreen>
-					<DictionaryResult />
+					<FloatingWidget />
+						
 				</Container>
 			</BrowserRouter>
       );
@@ -35,7 +37,6 @@ class App extends Component {
 export default App
 
 const Container = styled.div`
-
 `
 
 const MainScreen = styled.div`
