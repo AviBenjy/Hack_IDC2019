@@ -25,6 +25,7 @@ const MainTitle = styled.h2`
   background-color: ${colors.primary};
   color: ${colors.secondary};
   padding: 8px 16px;
+  position: sticky;
 `
 
 const Info = styled.p``
