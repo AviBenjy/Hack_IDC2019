@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Chart from 'react-apexcharts'
+import styled from '@emotion/styled'
 
 const optionsDef = {
     chart: {
@@ -52,13 +53,29 @@ const ChartInfo = () => {
     const [series, setSeries] = useState(seriesDef)
 
     return (
+      <Card>
+
         <Chart 
             options={options} 
             series={series} 
             type="line" 
             width={500} height={320} 
-        />
+            />
+            </Card>
     )
 }
 
 export default ChartInfo
+
+const Card = styled.div`
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 8px;
+    transition: 0.3s;
+    padding: 16px 16px;
+    line-height: 32px;
+    border-radius: 4px;
+    background: ${'#fff'};
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+`
