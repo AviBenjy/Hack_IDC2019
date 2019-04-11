@@ -1,7 +1,21 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import { connect } from 'react-redux'
+import SearchInput from '../../Atom/SearchInput'
 
-const DictionaryResult = ({ title, description }) => {
+
+const Row = ({ title, description }) => (
+  <div>
+    <Title>
+      <h4>{title || 'mortgage'}</h4>
+    </Title>
+    <Description>
+      {description || 'is a loan like any other loan but is specific to the purchase of a house'}
+    </Description>
+  </div>
+)
+
+const DictionaryResult = ({ dictionary }) => {
 
     return (
       <Container>
@@ -9,24 +23,38 @@ const DictionaryResult = ({ title, description }) => {
           <Half><I className="fas fa-book-open"></I></Half>
         </IconContainer>
         <Span>Dictionary</Span>
-        <Title>
-          <h4>{title || 'mortgage'}</h4>
-        </Title>
-        <Description>
-          {description || 'is a loan like any other loan but is specific to the purchase of a house'}
-        </Description>
+
+        <Results>
+
+        {
+          dictionary.map(r => <Row title={r.title} description={r.description}/>)
+        }
+        </Results>
+
+        <SearchInput width={'100%'}/>
       </Container>
     )
 }
 
-export default DictionaryResult;
+const mapStateToProps = (state) => ({
+  dictionary: state.helper.data
+})
+
+export default connect(mapStateToProps, null)(DictionaryResult)
 
 const Container = styled.div`
-    width: 320px;
+width: 320px;
+
     padding: 20px;
     border-radius: 20px;
     box-shadow: 2px 10px 40px rgba(22, 20, 19, 0.4);
     margin: 138px 0 0 216px;
+`
+
+const Results = styled.div`
+height: 300px;
+overflow: hidden;
+overflow-y: scroll;
 `
 const Span = styled.span`
     display: block;
