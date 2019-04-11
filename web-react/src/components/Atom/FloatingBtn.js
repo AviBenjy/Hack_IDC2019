@@ -4,7 +4,7 @@ import styled from '@emotion/styled'
 // components
 import Icon from '../Atom/Icon'
 
-const FloatingBtn = ({ onClick , iconIndex, size }) => {
+const FloatingBtn = ({ onClick , iconIndex, size, color }) => {
   
     const handleClick = () => {
         if (onClick) onClick()
@@ -12,7 +12,7 @@ const FloatingBtn = ({ onClick , iconIndex, size }) => {
     
     return (
         <Container onClick={handleClick}>
-            <Icon index={iconIndex || 4} size={size || 40} color={'#ffbd45'}/>
+            <Icon index={iconIndex || 4} size={size || 40} color={color || '#ffbd45'}/>
         </Container>
     )
 }

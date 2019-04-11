@@ -1,7 +1,8 @@
 // actions Types
-// import { ACTION } from '../actionsTypes'
+import { SHOW_DICTIONARY } from '../actionsTypes'
 
 const initialState = {
+	showDictionary: false,
 	data: [
 		{
 		  title: 'mortgage',
@@ -32,9 +33,11 @@ const initialState = {
 
 export const helperReducer = (state = initialState, {type, payload}) => {
 	const helper = { ...state.helper }
+	const b = {...helper, showDictionary: payload}
   	switch (type) {
-  		// case ACTION:
-  	    // 	return { ...state }
+			case SHOW_DICTIONARY:
+					
+  	    	return { ...state, ...b}
   		default:
   	    	return state
   	}
