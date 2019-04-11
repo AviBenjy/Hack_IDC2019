@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import styled from '@emotion/styled';
-import { connect } from 'react-redux'
-import SearchInput from '../../Atom/SearchInput'
+import * as colors from '../../../theme/colors';
+import { connect } from 'react-redux';
+import SearchInput from '../../Atom/SearchInput';
 
 
 const Row = ({ title, description }) => (
   <div>
     <Title>
-      <h4>{title || 'mortgage'}</h4>
+      {title || 'mortgage'}
     </Title>
     <Description>
       {description || 'is a loan like any other loan but is specific to the purchase of a house'}
@@ -62,17 +63,20 @@ const Container = styled.div`
 `
 
 const Results = styled.div`
-height: 300px;
-overflow: hidden;
-overflow-y: scroll;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: scroll;
+    margin-bottom: 10px;
 `
 const Span = styled.span`
     display: block;
+    padding-bottom: 5px;
     border-bottom: 1px solid #e2dfdf;
 `
 const Title = styled.div`
-    padding: 5px 0 5px 0;
-    text-align: center;
+    padding: 5px 0 0 5px;
+    font-weight: 500;
+    color: ${colors.secondary}
 `
 const Description = styled.div`
     padding: 5px;
@@ -88,6 +92,7 @@ const I = styled.i`
     padding: 15px;
     font-size: 45px;
     background: #fff;
+    color: ${colors.primaryDark}
 `
 const Half = styled.div`
     box-shadow: 1px 4px 20px rgba(22, 20, 19, 0.6);
