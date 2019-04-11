@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from '@emotion/styled';
-import * as colors from '../../../theme/colors'
+yimport * as colors from '../../../theme/colors'
 import { connect } from 'react-redux'
 import SearchInput from '../../Atom/SearchInput'
 
