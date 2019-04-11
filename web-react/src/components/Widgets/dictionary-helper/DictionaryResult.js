@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from '@emotion/styled';
-yimport * as colors from '../../../theme/colors'
-import { connect } from 'react-redux'
-import SearchInput from '../../Atom/SearchInput'
+import * as colors from '../../../theme/colors';
+import { connect } from 'react-redux';
+import SearchInput from '../../Atom/SearchInput';
 
 
 const Row = ({ title, description }) => (
