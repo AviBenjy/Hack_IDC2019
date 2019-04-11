@@ -18,15 +18,15 @@ const Row = ({ title, description }) => (
 
 const DictionaryResult = ({ dictionary }) => {
 
-  const [filterd, setFilterd] = useState([])
+  const [search, setSearch] = useState('')
+
     const handleChange = (value) => {
-      const data = dictionary.filter(dict => dict.title.includes(value))
-      setFilterd(data)
+      setSearch(value)
     }
 
     useEffect(() => {
-      handleChange('')
-    })
+      
+    }, [])
 
     return (
       <Container>
@@ -37,13 +37,13 @@ const DictionaryResult = ({ dictionary }) => {
         <Span>Dictionary</Span>
 
         <Results>
-
         {
-          filterd.map(r => <Row title={r.title} description={r.description}/>)
+          dictionary.filter(dict => dict.title.includes(search))
+          .map(r => <Row key={r.title} title={r.title} description={r.description}/>)
         }
         </Results>
 
-        <SearchInput width={'100%'} onChange={handleChange}/>
+        <SearchInput value={search} width={'100%'} onChange={handleChange}/>
       </Container>
     )
 }

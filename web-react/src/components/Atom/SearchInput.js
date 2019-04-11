@@ -13,7 +13,7 @@ const inputStyle = {
     fontSize: '16px',
 }
 
-const SearchInput = ({ onSubmit, onChange, width, height }) => {
+const SearchInput = ({ onSubmit, onChange, width, height , value}) => {
 
     const handleSubmit = (e) => {
         if (e.key === 'Enter' && onSubmit) onSubmit(e.target.value)
@@ -26,7 +26,7 @@ const SearchInput = ({ onSubmit, onChange, width, height }) => {
     return (
       <Container width={width} height={height}>
         <i className="fas fa-search"></i>
-        <input css={inputStyle} onChange={handleChange} onKeyDown={handleSubmit} />      
+        <input value={value} css={inputStyle} onChange={handleChange} onKeyDown={handleSubmit} />      
       </Container>
     );
 }
