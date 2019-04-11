@@ -5,7 +5,7 @@ import CardList from '../../Widgets/card_list/CardList'
 const Deals = () => {
   return (
     <Container>
-      I wanna...
+      <Title>I wanna...</Title>
       <CardList />
     </Container>
   )
@@ -17,4 +17,8 @@ const Container = styled.div`
 margin: 56px 0 0 170px;
 height: 100vh;
 background: white;
+`
+
+const Title = styled.h3`
+  
 `

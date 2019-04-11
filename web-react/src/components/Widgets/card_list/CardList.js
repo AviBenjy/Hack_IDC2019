@@ -20,9 +20,11 @@ const CardList = () => {
 }
 
 const Container = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 30%));
+  grid-gap: 30px;
+  width: 60%;
+  margin: 0 auto;
 `
 
 export default CardList

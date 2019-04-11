@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import { setSelectOffer } from '../../../redux/actions/dealsActions'
 import styled from '@emotion/styled'
 import * as colors from '../../../theme/colors'
-// import travelImage from '../../../assets/images/travel.png'
 
-const Card = ({ title, image }) => {
+const Card = ({ title, image, setSelectOffer}) => {
     return (
-      <Container>
+      <Container onClick={() => setSelectOffer(title)}>
         <IconWrapper>
           <Image src={image}/>
         </IconWrapper>
@@ -19,12 +20,18 @@ const Container = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid ${colors.primaryLight};
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   width: 200px;
   height: 200px;
   border-radius: 4px;
   cursor: pointer;
   color: ${colors.TextOnLight};
+  padding: 15px;
+  text-align: center;
+  margin: 15px;
+  &:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+  }
 `
 
 const IconWrapper = styled.div`
@@ -38,9 +45,20 @@ const Image = styled.img`
   width: 50%
 `
 
-const Title = styled.h2`
-  
-  align-self: flex-end;
+const Title = styled.div`
+  display: flex;
+  align-items: flex-end;
+  font-weight: 500;
+  color: linear-gradient(to right,#ff8a00,#da1b60);
 `
 
-export default Card
+const mapStateToProps = (state) => {
+  return {
+    selectedCard: state.deals.selectedOffer
+  }
+}
+
+export default connect(
+  mapStateToProps,
+  { setSelectOffer }
+)(Card)
