@@ -8,8 +8,11 @@ import * as colors from '../../../theme/colors'
 const StatusAccount = () => {
   return (
     <Container>
+      <Header>
+        <Img src='https://img.icons8.com/bubbles/2x/administrator-male.png'></Img>
         <Title>Status Account</Title>
         <p>Balance: $ 3006</p> 
+      </Header>
     </Container>
   )
 }
@@ -34,5 +37,17 @@ const Container = styled.div`
 const Title = styled.div`
     font-size: 20px;
     font-weight: bold;
+`
+const Header = styled.div`
+    background: ${colors.primaryDark};
+    text-align: center;
+    padding-top: 14px;
+`
+
+const Img = styled.img`
+    border-radius: 50%;
+    border: 5px solid ${colors.secondaryDark};
+    width: 100px;
+    height: 100px;
 `
   
