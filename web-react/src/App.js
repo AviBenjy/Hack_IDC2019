@@ -25,6 +25,7 @@ class App extends Component {
 						<Route path='/deals' render={() => <Deals/>}/>
 						<Route path='/helper' render={() => <Helper/>}/>
 					</MainScreen>
+					<DictionaryResult />
 				</Container>
 			</BrowserRouter>
       );

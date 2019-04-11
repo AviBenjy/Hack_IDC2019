@@ -24,7 +24,7 @@ const SearchInput = ({ onSubmit, onChange, width, height }) => {
     }
   
     return (
-      <Container>
+      <Container width={width} height={height}>
         <i className="fas fa-search"></i>
         <input css={inputStyle} onChange={handleChange} onKeyDown={handleSubmit} />      
       </Container>
