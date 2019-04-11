@@ -10,9 +10,9 @@ const StatusAccount = () => {
     <Container>
       <Header>
         <Img src='https://img.icons8.com/bubbles/2x/administrator-male.png'></Img>
+        <Title>Status Account</Title>
+        <p>Balance: $ 3006</p> 
       </Header>
-        {/* <Title>Status Account</Title>
-        <p>Balance: $ 3006</p>  */}
     </Container>
   )
 }
