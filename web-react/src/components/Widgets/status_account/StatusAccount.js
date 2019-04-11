@@ -24,7 +24,6 @@ const Container = styled.div`
     transition: 0.3s;
     width: 35%;
     height: 280px;
-    padding: 16px 16px;
     line-height: 32px;
     border-radius: 4px;
     background: ${'#fff' || colors.greenDark};
@@ -42,6 +41,9 @@ const Header = styled.div`
     background: ${colors.primaryDark};
     text-align: center;
     padding-top: 14px;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+
 `
 
 const Img = styled.img`
