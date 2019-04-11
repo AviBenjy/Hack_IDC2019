@@ -52,7 +52,7 @@ export default Menu
 
 const Container = styled.div`
     position: fixed;
-    background: ${colors.primaryLight};
+    background: ${colors.primary};
     color: ${colors.TextOnP};
     height: 100vh;
     top: 0;

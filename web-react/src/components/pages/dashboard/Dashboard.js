@@ -24,12 +24,12 @@ export default Dashboard
 const Container = styled.div`
     margin: 56px 0 0 170px;
     height: 100vh;
-    
   `
     
 const ChartInfoBasic = styled.div`
     padding: 20px;
     display: flex;
+    flex-wrap: wrap;
 `
 const Spacer = styled.div`
   width: 20px;

@@ -9,7 +9,7 @@ const StatusAccount = () => {
   return (
     <Container>
         <Title>Status Account</Title>
-        <p>Cash: 3006 $</p> 
+        <p>Balance: $ 3006</p> 
     </Container>
   )
 }
@@ -24,8 +24,8 @@ const Container = styled.div`
     padding: 16px 16px;
     line-height: 32px;
     border-radius: 4px;
-    background: #546e7a;
-    color: ${colors.TextOnP};
+    background: ${colors.greenDark};
+    color: ${colors.secondaryLight};
     &:hover {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
