@@ -6,7 +6,6 @@ import OfferResults from '../../Widgets/offers_results/OffersRsults';
 const Deals = () => {
   return (
     <Container>
-      <Title>I wanna...</Title>
       <CardList />
 
       <WrapperOfferResults>
@@ -27,7 +26,6 @@ background: white;
 `
 
 const Title = styled.h3`
-  
 `
 
 const WrapperOfferResults = styled.div`
