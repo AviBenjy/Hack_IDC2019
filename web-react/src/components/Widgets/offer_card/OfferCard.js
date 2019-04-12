@@ -7,7 +7,8 @@ const m = 'הלוואה ברגע עד 75,000 ₪ לתקופה של עד 60 חו�
 const OfferCard = ({offer}) => {
   return (
     <Container>
-      {offer || m}
+      <Title>{offer.title || m}</Title>
+      <Description>{offer.description || m}</Description>
     </Container>
   )
 }
@@ -24,9 +25,16 @@ padding: 16px 16px;
 line-height: 32px;
 border-radius: 4px;
 color: ${colors.secondary || '#fff'};
-font-size: 20px;
+font-size: 18px;
 font-weight: 600;
 &:hover {
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 }
+`
+
+const Title = styled.h3``
+
+const Description = styled.p`
+  color: ${colors.TextOnLight};
+  font-size: 16px;
 `
