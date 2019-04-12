@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from '@emotion/styled'
+import image from '../../../assets/images/a.svg'
 
 const DreamList  = () => {
   return (
     <Container>
-      my dream list
+      <img src={image} />
     </Container>
   )
 }
