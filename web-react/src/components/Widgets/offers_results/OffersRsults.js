@@ -2,6 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import styled from '@emotion/styled'
 import OfferCard from '../offer_card/OfferCard'
+import BankerCall from '../banker_call/BankerCall'
 
 const category = {
     'redo my kitchen': ['Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers an immediate loan on convenient terms for renovation, vacation or any other purpose. Enjoy and return at your own pace.',
@@ -21,6 +22,7 @@ const OffersResults = ({ selectedOffer }) => {
   return (
     <Container>
       {category[selectedOffer] && category[selectedOffer].map(offer => <OfferCard key={offer} offer={offer}/>)}
+      <BankerCall/>
     </Container>
   )
 }
