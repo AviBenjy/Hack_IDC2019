@@ -9,8 +9,8 @@ import Deals from './components/pages/deals/Deals'
 import Helper from './components/pages/helper/Helper'
 import Header from './components/Widgets/header/Header'
 import Menu from './components/Widgets/menu/Menu'
-import DictionaryResult from './components/Widgets/dictionary-helper/DictionaryResult'
-import FloatingWidget from './components/Widgets/floating_widget/FloatingWidget';
+import FloatingWidget from './components/Widgets/floating_widget/FloatingWidget'
+import DreamList from './components/pages/dreamList/DreamList'
 
 
 class App extends Component {
@@ -25,9 +25,9 @@ class App extends Component {
 						<Route path='/chat' render={() => <Chat/>}/>
 						<Route path='/deals' render={() => <Deals/>}/>
 						<Route path='/helper' render={() => <Helper/>}/>
+						<Route path='/dream-list' render={() => <DreamList/>}/>
 					</MainScreen>
 					<FloatingWidget />
-						
 				</Container>
 			</BrowserRouter>
       );

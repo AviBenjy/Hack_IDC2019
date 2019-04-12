@@ -9,12 +9,14 @@ import NotificationsIcon from '@material-ui/icons/Notifications';
 // theme
 import * as colors from '../../../theme/colors'
 
+
 class PrimarySearchAppBar extends React.Component {
 
   render() {
 
     return (
       <Container>
+        <img alt='logo' src={'/src/assets/images/logo.png'}/>
             <Typography variant="h6" color="inherit" noWrap>
               MIZRAHI TEFAHOT
             </Typography>

@@ -13,6 +13,7 @@ const icons = [
     "fas fa-search", // 6 search icon
     "fas fa-times-circle", // 7 close icon 
     "fas fa-magic", // 8 wand icon
+    "fas fa-list-alt" //9
 ]
 
 const Icon = ({index, size, color, label, selected}) => (
