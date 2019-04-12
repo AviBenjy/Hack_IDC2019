@@ -43,6 +43,15 @@ const Menu = () => {
                       label='Helper'/>
             </IconWrapper>
         </Link>
+
+        <Link to='/dream-list'>
+            <IconWrapper onClick={() => setSelected(9)}>
+                <Icon index={9} size={24} 
+                      color={colors.TextOnS} 
+                      selected={selected === 9}
+                      label='Dream List'/>
+            </IconWrapper>
+        </Link>
     </Container>
   )
 }
