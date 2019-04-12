@@ -29,10 +29,10 @@ const Menu = () => {
         </Link>
         <Link to='/deals'>
             <IconWrapper onClick={() => setSelected(2)}>
-                <Icon index={2} size={24} 
+                <Icon index={8} size={24} 
                       color={colors.TextOnS} 
                       selected={selected === 2}
-                      label='Deals'/>
+                      label='I wanna...'/>
             </IconWrapper>
         </Link>
         <Link to='/helper'>

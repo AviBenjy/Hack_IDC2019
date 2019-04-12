@@ -6,12 +6,13 @@ import * as colors from '../../theme/colors'
 const icons = [
     "fas fa-chart-pie", // 0 dashboard icon
     "fas fa-comment-alt", // 1 chat icon
-    "fas fa-hands-helping", // 2 deals icon
+    "fas fa-hands-helping", // 2 i want to icon
     "fas fa-question-circle", // 3 helper icon
     "fas fa-book-open", // 4
     "fas fa-plus-circle", // 5 plus icon
     "fas fa-search", // 6 search icon
-    "fas fa-times-circle" // 7 close icon
+    "fas fa-times-circle", // 7 close icon 
+    "fas fa-magic", // 8 wand icon
 ]
 
 const Icon = ({index, size, color, label, selected}) => (
