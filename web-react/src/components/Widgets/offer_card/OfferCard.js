@@ -18,6 +18,7 @@ export default OfferCard
 
 // background-image: linear-gradient(to right,#ff8a00,#da1b60);
 const Container = styled.div`
+height: 300px;
 box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 margin: 8px;
 transition: 0.3s;

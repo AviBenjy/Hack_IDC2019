@@ -21,23 +21,23 @@ const category = {
   'redo my kitchen': [
     {
       title: 'How about a loan?',
-      description: `Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers an immediate loan on convenient terms for renovation, vacation or any other purpose. Enjoy and return at your own pace.`
+      description: `Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers an immediate.`
     },
     {
       title: 'Maybe this loan is for you?',
-      description: `We offer you, Rachel, a mortgage in a winning team - Loan period: 4-30 years. Linkage: a combination of CPI-linked, unlinked (on a prime-rate basis) and foreign currency linked (USD / EUR) tracks.`
+      description: `We offer you, Rachel, a mortgage in a winning team - Loan period: 4-30 years. Linkage: a combination of CPI-linked and foreign currency linked (USD / EUR) tracks.`
     }
   ],
   'buy a new home': [{
     title: 'Maybe a mortgage?',
-    description: `We invite you to apply for a mortgage and determine communication with your personal, banking life. Tefahot's leading mortgage experts will give you quick approval in principle to the amount you need and an estimate of the financing you can get to purchase the apartment you've always dreamed of.`
+    description: `We invite you to apply for a mortgage and determine communication with your personal.`
   },{
     title: 'Maybe this path is right for you...',
-    description: `We offer you, Rachel, a mortgage in a winning team - Loan period: 4-30 years. Linkage: a combination of CPI-linked, unlinked (on a prime-rate basis) and foreign currency linked (USD / EUR) tracks.`
+    description: `We offer you, Rachel, a mortgage in a winning team - Loan period: 4-30 years. Linkage: a combination of CPI-linked and foreign currency linked (USD / EUR) tracks.`
   }],
   'go on holiday': [{
     title: 'Maybe a mortgage?',
-    description: `We invite you to apply for a mortgage and determine communication with your personal, banking life. Tefahot's experts, leading mortgages, will give you quick approval in principle to the amount you need and an estimate of the financing you can get to purchase the apartment you have always dreamed of.`
+    description: `We invite you to apply for a mortgage and determine communication with your personal, banking life. Tefahot's experts, leading mortgages, will give you quick approval in principle to the amount you need and an estimate.`
   },{
     title: 'How about a loan?',
     description: `We offer you, Rachel, a mortgage in a winning team - Loan period: 4-30 years. Linkage: a combination of CPI-linked, unlinked (on a prime-rate basis) and foreign currency linked (USD / EUR) tracks.`
@@ -58,21 +58,36 @@ const category = {
   }],
   'go to university': [{
     title: 'Need a student loan?',
-    description: `Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers an immediate loan on convenient terms for renovation, vacation or any other purpose. Enjoy and return at your own pace.`
+    description: `Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers.`
   },{
     title: 'Need a student loan?',
-    description: `Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers an immediate loan on convenient terms for renovation, vacation or any other purpose. Enjoy and return at your own pace.`
+    description: `Up to 75,000 NIS for a period of up to 60 months, directly to your account within one business day, without guarantors and without leaving home. We offer our customers.`
   }] 
 }
 
 const OffersResults = ({ selectedOffer }) => {
     console.log('selectedOffer', selectedOffer)
   return (
-    <Container>
-      <BankerCall/>
-      {/* <Title>Maybe these might interest you?...</Title> */}
-      {category[selectedOffer] && category[selectedOffer].map(offer => <OfferCard key={offer.title} offer={offer}/>)}
+      <div>
+          {
+            category[selectedOffer] && 
+              <Container>
+                 <Title>Maybe these might interest you?...</Title>
+                <WrapperResult>
+                    {category[selectedOffer].map(offer => {
+                         return (
+                             <FlexItem>
+                                 <OfferCard key={offer.title} offer={offer}/>
+                             </FlexItem>
+                         )
+        })}
+        <FlexItem>
+            <BankerCall/>
+        </FlexItem>
+      </WrapperResult>
     </Container>
+    }
+        </div>
   )
 }
 
@@ -84,8 +99,22 @@ export default connect(mapStateToProps, null)(OffersResults)
 
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(150px, 30%))
+    padding-top: 50px;
+    margin-bottom: 90px;
+    `
+    // background: #e91e63;
+
+const Title = styled.h1`
+    margin: 24px;
+    color: rgb(105, 105, 106);
 `
 
-const Title = styled.h1``
+const WrapperResult = styled.div`
+    display: flex;
+`
+
+const FlexItem = styled.div`
+`
+// border: 1px solid black;
+// flex-grow: 1;
+// flex-basis: 0;

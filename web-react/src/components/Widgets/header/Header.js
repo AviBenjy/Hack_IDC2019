@@ -5,6 +5,7 @@ import Typography from '@material-ui/core/Typography';
 import Badge from '@material-ui/core/Badge';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import NotificationsIcon from '@material-ui/icons/Notifications';
+import logo from '../../../assets/images/logo.png'
 
 // theme
 import * as colors from '../../../theme/colors'
@@ -16,7 +17,7 @@ class PrimarySearchAppBar extends React.Component {
 
     return (
       <Container>
-        <img alt='logo' src={'/src/assets/images/logo.png'}/>
+        {/* <img alt='logo' src={logo}/> */}
             <Typography variant="h6" color="inherit" noWrap>
               MIZRAHI TEFAHOT
             </Typography>

@@ -1,9 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import styled from '@emotion/styled'
 import * as colors from '../../../theme/colors'
+import AppointmentPicker from '../appointment_picker/AppointmentPicker';
+
+import "react-datepicker/dist/react-datepicker.css"
 
 
 const BankerCall = () => {
+    const [showBanker, setShowBanker] = useState(false)
+    const handleClick = () => {
+        setShowBanker(true)
+    }
   return (
     <Container>
         <Card>
@@ -11,8 +18,13 @@ const BankerCall = () => {
                 <Img src="http://tandur.in/uploads/list_items/contact/2017-05-19-02-35-40-people19.png"/>
                 <Title>
                 </Title>
-                <Btn>Consult Yossi</Btn>
+                <Btn onClick={handleClick}>Consult Yossi</Btn>
             </Header>
+            {
+                showBanker &&
+            <WrapperDate>
+                <AppointmentPicker/>
+            </WrapperDate>}
         </Card>
     </Container>
   )
@@ -23,10 +35,12 @@ export default BankerCall
 
 // background-image: linear-gradient(to right,#ff8a00,#da1b60);
 const Container = styled.div`
-
 `
 
 const Card = styled.div`
+    position: relative;
+    height: 300px;
+    width: 190px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     margin: 8px;
     transition: 0.3s;
@@ -55,6 +69,7 @@ const Header = styled.div`
 `
 
 const Img = styled.img`
+    margin-top: 12px;
     border-radius: 50%;
     border: 2px solid ${colors.secondaryDark};
     width: 100px;
@@ -63,6 +78,7 @@ const Img = styled.img`
     `
 
 const Btn = styled.button`
+    margin-top: 50px;
     background: ${colors.primary || '#1AAB8A'};
     color:#fff;
     border:none;
@@ -101,3 +117,23 @@ const Btn = styled.button`
     transition:800ms ease all;
   }
 `
+
+const WrapperDate = styled.div`
+    position: absolute;
+    bottom: -10px;
+    left: -244px;
+    background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin: 8px;
+    transition: 0.3s;
+    line-height: 32px;
+    border-radius: 4px;
+    color: ${colors.secondary || '#fff'};
+    font-size: 20px;
+    font-weight: 600;
+    &:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+    }
+`
+// width: 400px;
+// height: 300px;
